@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>يوتيوبي / مشاهدة</title>
+	<link href="css/bootstrap-rtl.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/watch.css">
+</head>
+
+<body class="mt-5 rtl">
+	<div class="layer"></div>
+	<div id="top-menu">
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
+				<i class="fa-solid fa-bars fa-lg" id="toggler"></i> <b><a class="navbar-brand btn"
+						href="index.html">يوتيوبي <span class="video-icon"><i
+								class="fas fa-play-circle"></i></span></a></b>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item ">
+							<a class="nav-link px-3 mx-2" href="index.html">الفيديوهات المقترحة <span
+									class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-3 mx-2" href="#">المرفوعة حديثا</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-3 mx-2" href="#" tabindex="0">الفيديوهات الرائجة</a>
+						</li>
+					</ul>
+					<div class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" placeholder="ابحث" type="search"> <button
+							class="btn my-2 my-sm-0" onclick="location.href='search.html';" type="submit">ابحث</button>
+					</div>
+				</div><i class="fa-solid fa-magnifying-glass mr-4 search-icon"></i> <a class="nav-link login"
+					data-target="#loginModal" data-toggle="modal" href="#">تسجيل الدخول</a>
+			</nav><input class="form-control search-input" placeholder="ابحث عن ..." type="search">
+			<!-- Modal -->
+			<div class="modal fade" id="loginModal" tabindex="0">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول</h5><button aria-label="Close"
+								class="close" data-dismiss="modal" type="button"><span
+									aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label class="col-form-label" for="email">البريد الإلكتروني:</label> <input
+										class="form-control" id="email" type="email">
+								</div>
+								<div class="form-group">
+									<label class="col-form-label" for="password">كلمة المرور:</label> <input
+										class="form-control" id="password" type="password">
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<a href="#">نسيت كلمة المرور</a> <a class="mx-auto" href="#">تسجيل جديد</a> <button
+								class="btn btn-primary" type="button">تسجيل الدخول</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- side bar -->
+			<div class="row pt-4">
+				<div id="wrap">
+					<div class="sidebar">
+						<div class="list-group list-group-flush" style="margin-left: 2em">
+							<a class="list-group-item list-group-item-action" href="index.html"><i
+									class="fa-solid fa-house ml-2 purple"></i> الصفحة الرئيسية</a> <a
+								class="list-group-item list-group-item-action" href="#"><i
+									class="fa-solid fa-ticket fa-lg ml-2 purple"></i> الفيديوهات المقترحة</a> <a
+								class="list-group-item list-group-item-action" href="#"><i
+									class="fa-solid fa-cloud-arrow-up fa-lg ml-2 purple"></i> المرفوعة حديثا</a> <a
+								class="list-group-item list-group-item-action" href="#"><i
+									class="fa-solid fa-arrow-up-right-dots fa-lg ml-2 purple"></i> الفيديوهات
+								الرائجة</a> <a class="list-group-item list-group-item-action" href="#"><i
+									class="fa-solid fa-file-video fa-lg ml-2 purple"></i> فيديوهاتي</a> <a
+								class="list-group-item list-group-item-action" href="log.html"><i
+									class="fa-regular fa-clock fa-lg ml-2 purple"></i> سجل المشاهدة</a> <a
+								class="list-group-item list-group-item-action" href="#"><i
+									class="fa-solid fa-share-nodes fa-lg ml-2 purple"></i> الاشتراكات</a> <a
+								class="list-group-item list-group-item-action" href="#"><i
+									class="fa-solid fa-film fa-lg ml-2 purple"></i> الأفلام والعروض</a> <a
+								class="list-group-item list-group-item-action" href="#"><i
+									class="fa-solid fa-headset fa-lg ml-2 purple"></i> ألعاب الفيديو</a> <a
+								class="list-group-item list-group-item-action" href="#"><i
+									class="fa-solid fa-user-tie fa-lg ml-2 purple"></i> الموضة والجمال</a> <a
+								class="list-group-item list-group-item-action" href="#"><i
+									class="fa-solid fa-person-chalkboard fa-lg ml-2 purple"></i> محتوى تعليمي</a> <a
+								class="list-group-item list-group-item-action" href="#"><i
+									class="fa-solid fa-gear fa-lg ml-2 purple"></i> الإعدادات</a> <a
+								class="list-group-item list-group-item-action" href="#"><i
+									class="fa-solid fa-question fa-lg ml-2 purple"></i> مساعدة</a> <a
+								class="list-group-item list-group-item-action"
+								href="https://academy.hsoub.com/learn/front-end-web-development/">دورة تطوير واجهات
+								المستخدم<br>
+								أكاديمية حسوب 2023 &COPY;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- page body -->
+	<div class="watch-page pt-5">
+		<div class="container-fluid">
+			<div class="card border-0">
+				<div class="row px-2">
+					<div class="col-lg-7">
+						<video class="w-100" controls="" poster="img/poster.png">
+							<track default="" kind="captions" label="عربي" src="video/caption.vtt" srclang="ar">
+							<source src="video/hsoub.webm" type="video/webm">
+							<source src="video/hsoub.mp4" type="video/mp4"> متصفحك لا يدعم تشغيل ال
+							<code>vedio</code>
+						</video>
+					</div>
+					<div class="col-lg-5">
+						<div class="card-block">
+							<small class="text-muted"><i class="fa fa-film"></i> <span>120 ألف مشاهدة</span>
+								<i class="fa-solid fa-clock"></i> <span>قبل 11 شهر</span> <a class="channel-img"
+									href="channel.html"><img alt="channel image" class="rounded-circle my-2 mr-2"
+										src="img/ch-logo.png" width="30px">
+									<span class="card-text">أكاديمية حسوب</span></a></small> <a href="watch.html">
+								<h4>دورة تطوير واجهات المستخدم - أكاديمية حسوب</h4>
+							</a>
+							<p>تم إعداد هذه الدورة على يد نخبة من أفضل المبرمجين العرب بتسلسل بسيط وواضح،<span
+									id="dots">
+									. . . </span>
+								<span id="more">
+									بإنهائك لها ستصبح مطوّر واجهات مستخدم دون الحاجة لامتلاك
+									معرفة سابقة
+									بالبرمجة، خلال هذه ستتعلم تطوير واجهات المستخدم خطوة بخطوة اعتمادًا على
+									التجربة العملية والمادة العلمية التي يقدمها مدربون محترفون.
+								</span>
+							</p>
+							<button class="btn mb-4 " id="myBtn">عرض المزيد</button>
+						</div>
+						<div class="watch-icons">
+							<i class="fa-regular fa-heart bg-secondary p-1 ml-2 rounded-circle text-white"
+								title="أحببته"></i> <i
+								class="fa-regular fa-clock bg-secondary p-1 ml-2 rounded-circle text-white"
+								title="المشاهدة لاحقا"></i> <i
+								class="fa fa-share bg-secondary p-1 ml-2 rounded-circle text-white" title="مشاركة"></i>
+							<i class="fa fa-plus bg-secondary p-1 ml-2 rounded-circle text-white"
+								title="إضافة إلى قائمة التشغيل"></i> <span class="mr-2">إبلاغ</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-4 px-2">
+				<div class=" col-lg-7 order-2 order-lg-1">
+					<div class="comments">
+						<div class="comments-detalils mb-3">
+							<span>التعليقات 5</span> <span class="dropdown"><button aria-expanded="false"
+									aria-haspopup="true" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
+									id="dropdownMenuButton" type="button"><span class="dropdown"><span
+											class="dropdown"><span class="dropdown"><span class="dropdown">الترتيب
+													بحسب</span></span></span></span>
+									<div aria-labelledby="dropdownMenuButton" class="dropdown-menu">
+										<a class="dropdown-item" href="#">التاريخ</a> <a class="dropdown-item"
+											href="#">التعليقات الأحدث</a>
+									</div>
+								</button></span>
+						</div>
+						<div class="public-comments">
+							<div class="form-group">
+								<textarea class="form-control" id="exampleFormControlTextarea1"
+									placeholder=" إضافة تعليق عام" rows="4"></textarea> <button
+									class="btn btn-danger mt-3" type="submit">تعليق</button>
+							</div>
+						</div>
+					</div>
+					<div class="card mt-5 mb-3">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-2">
+									<img class="img img-rounded img-fluid"
+										src="https://image.ibb.co/jw55Ex/def_face.jpg">
+									<p class="text-secondary text-center time-reply">منذ 15 دقيقة</p>
+								</div>
+								<div class="col-10">
+									<p><a href="#"><strong class="float-right mt-3 mt-md-4">أحمد
+												سمير</strong></a> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span></p>
+									<div class="clearfix"></div>
+									<p>شكرا على هذه الدورة وهذا المحتوى الرائع</p>
+									<p>
+										<a class="float-right btn text-white btn-danger ml-2 mt-4 reply">
+											<i class="fa fa-reply">
+											</i>
+											الردود
+										</a>
+										<a class="float-right btn text-white btn-danger mt-4">
+											<i class="fa fa-heart">
+											</i>
+											أعجبني
+										</a>
+									</p>
+								</div>
+							</div>
+							<div class="card card-inner mr-5 mt-3">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-md-2">
+											<img class="img img-rounded img-fluid"
+												src="https://image.ibb.co/jw55Ex/def_face.jpg">
+											<p class="text-secondary text-center">منذ عشرين دقيقة</p>
+										</div>
+										<div class="col-md-10">
+											<p><a href="#"><strong>أكاديمية حسوب</strong></a></p>
+											<p>أهلا أحمد سعداء أن الدورة أعجبتك</p>
+											<p><a class="float-right btn text-white btn-danger mt-4"><i
+														class="fa fa-heart"></i> أعجبني</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card mt-5 mb-3">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-2">
+									<img class="img img-rounded img-fluid"
+										src="https://image.ibb.co/jw55Ex/def_face.jpg">
+									<p class="text-secondary text-center time-reply">منذ 20 دقيقة</p>
+								</div>
+								<div class="col-10">
+									<p><a href="#"><strong class="float-right mt-3 mt-md-4">محمد
+												فرج</strong></a> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span></p>
+									<div class="clearfix"></div>
+									<p>استفدت كثيرا من هذه الدورة شكرا لكم</p>
+									<p><a class="float-right btn text-white btn-danger ml-2 mt-4 reply"><i
+												class="fa fa-reply"></i> الردود</a>
+										<a class="float-right btn text-white btn-danger mt-4"><i
+												class="fa fa-heart"></i> أعجبني</a>
+									</p>
+								</div>
+							</div>
+							<div class="card card-inner mr-5 mt-3">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-md-2">
+											<img class="img img-rounded img-fluid"
+												src="https://image.ibb.co/jw55Ex/def_face.jpg">
+											<p class="text-secondary text-center">منذ 15 دقيقة</p>
+										</div>
+										<div class="col-md-10">
+											<p><a href="#"><strong>أكاديمية حسوب</strong></a></p>
+											<p>سعداء جدا يا محمد بذلك ونتمنى لك مزيدا من التوفيق</p>
+											<p><a class="float-right btn text-white btn-danger mt-4"><i
+														class="fa fa-heart"></i> أعجبني</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card mt-5 mb-3">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-2">
+									<img class="img img-rounded img-fluid"
+										src="https://image.ibb.co/jw55Ex/def_face.jpg">
+									<p class="text-secondary text-center time-reply">منذ ساعة</p>
+								</div>
+								<div class="col-10">
+									<p><a href="#"><strong class="float-right mt-3 mt-md-4">سما
+												محمد</strong></a> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span></p>
+									<div class="clearfix"></div>
+									<p>شكرا على هذا المجهود الكبير دورة مميزة</p>
+									<p><a class="float-right btn text-white btn-danger ml-2 mt-4 reply"><i
+												class="fa fa-reply"></i> الردود</a> <a
+											class="float-right btn text-white btn-danger mt-4"><i
+												class="fa fa-heart"></i> أعجبني</a></p>
+								</div>
+							</div>
+							<div class="card card-inner mr-5 mt-3">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-md-2">
+											<img class="img img-rounded img-fluid"
+												src="https://image.ibb.co/jw55Ex/def_face.jpg">
+											<p class="text-secondary text-center">منذ أربعين دقيقة</p>
+										</div>
+										<div class="col-md-10">
+											<p><a href="#"><strong>أكاديمية حسوب</strong></a></p>
+											<p>أهلا سما سعداء بذلك ونتمنى لك التوفيق</p>
+											<p><a class="float-right btn text-white btn-danger mt-4"><i
+														class="fa fa-heart"></i> أعجبني</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card mt-5 mb-3">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-2">
+									<img class="img img-rounded img-fluid"
+										src="https://image.ibb.co/jw55Ex/def_face.jpg">
+									<p class="text-secondary text-center time-reply">منذ ساعة و 30 دقيقة</p>
+								</div>
+								<div class="col-10">
+									<p><a href="#"><strong class="float-right mt-3 mt-md-4">عماد
+												الوكيل</strong></a> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span></p>
+									<div class="clearfix"></div>
+									<p>شكرا على هذه الدورة وإن شاء الله أريد أن أستمر معكم في دورات أخرى</p>
+									<p><a class="float-right btn text-white btn-danger ml-2 mt-4 reply"><i
+												class="fa fa-reply"></i> الردود</a> <a
+											class="float-right btn text-white btn-danger mt-4"><i
+												class="fa fa-heart"></i> أعجبني</a></p>
+								</div>
+							</div>
+							<div class="card card-inner mr-5 mt-3">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-md-2">
+											<img class="img img-rounded img-fluid"
+												src="https://image.ibb.co/jw55Ex/def_face.jpg">
+											<p class="text-secondary text-center">منذ ساعة</p>
+										</div>
+										<div class="col-md-10">
+											<p><a href="#"><strong>أكاديمية حسوب</strong></a></p>
+											<p>أهلا عماد سعداء أن الدورة أعجبتك ونتطلع إلى مشاركتك معنا في
+												دورات قادمة</p>
+											<p><a class="float-right btn text-white btn-danger mt-4"><i
+														class="fa fa-heart"></i> أعجبني</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card mt-5 mb-3">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-2">
+									<img class="img img-rounded img-fluid"
+										src="https://image.ibb.co/jw55Ex/def_face.jpg">
+									<p class="text-secondary text-center time-reply">منذ ساعتين</p>
+								</div>
+								<div class="col-10">
+									<p><a href="#"><strong class="float-right mt-3 mt-md-4">خديجة
+												العتيبي</strong></a> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span> <span class="float-left"><i
+												class="text-warning fa fa-star"></i></span></p>
+									<div class="clearfix"></div>
+									<p>شكرا على هذه الدورة محتوى جدا ممتاز</p>
+									<p><a class="float-right btn text-white btn-danger ml-2 mt-4 reply"><i
+												class="fa fa-reply"></i> الردود</a> <a
+											class="float-right btn text-white btn-danger mt-4"><i
+												class="fa fa-heart"></i> أعجبني</a></p>
+								</div>
+							</div>
+							<div class="card card-inner mr-5 mt-3">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-md-2">
+											<img class="img img-rounded img-fluid"
+												src="https://image.ibb.co/jw55Ex/def_face.jpg">
+											<p class="text-secondary text-center">منذ ساعة و 30 دقيقة</p>
+										</div>
+										<div class="col-md-10">
+											<p><a href="#"><strong>أكاديمية حسوب</strong></a></p>
+											<p>أهلا خديجة سعداء بسماع ذلك ونتمنى لك مزيدا من التوفيق</p>
+											<p><a class="float-right btn text-white btn-danger mt-4"><i
+														class="fa fa-heart"></i> أعجبني</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 order-1 order-lg-2">
+					<p>الاقتراحات</p>
+					<div class="card p-2 mb-4">
+						<div class="row">
+							<div class="col-sm-5">
+								<div class="card-icons w-100 h-100">
+									<a href="watch.html">
+										<img alt="" class="w-100 h-100" src="img/thumbnail/ruby.jpg">
+										<time>7:10</time>
+										<i class="fa-solid fa-play fa-lg"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-7">
+								<div class="card-block">
+									<a href="watch.html">
+										<p>دورة تطوير تطبيقات الويب باستخدام لغة Ruby - أكاديمية حسوب</p>
+									</a> <small class="text-muted"><i class="fa fa-film"></i> <span>70 ألف
+											مشاهدة</span> <a class="channel-img" href="channel.html"><span
+												class="d-sm-block mt-2"><img alt="channel image"
+													class="rounded-circle my-2 mr-2 mr-sm-0" src="img/ch-logo.png"
+													width="30px"> <span class="card-text">أكاديمية
+													حسوب</span></span></a></small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card p-2 mb-4">
+						<div class="row">
+							<div class="col-sm-5">
+								<div class="card-icons w-100 h-100">
+									<a href="watch.html">
+										<img alt="" class="w-100 h-100" src="img/thumbnail/php.jpg">
+										<time>4:35</time>
+										<i class="fa-solid fa-play fa-lg"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-7">
+								<div class="card-block">
+									<a href="watch.html">
+										<p>دورة تطوير تطبيقات الويب باستخدام لغة PHP - أكاديمية حسوب</p>
+									</a> <small class="text-muted"><i class="fa fa-film"></i> <span>120 ألف
+											مشاهدة</span> <a class="channel-img" href="channel.html"><span
+												class="d-sm-block mt-2"><img alt="channel image"
+													class="rounded-circle my-2 mr-2 mr-sm-0" src="img/ch-logo.png"
+													width="30px"> <span class="card-text">أكاديمية
+													حسوب</span></span></a></small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card p-2 mb-4">
+						<div class="row">
+							<div class="col-sm-5">
+								<div class="card-icons w-100 h-100">
+									<a href="watch.html">
+										<img alt="" class="w-100 h-100" src="img/thumbnail/khamsat3.png">
+										<time>6:15</time>
+										<i class="fa-solid fa-play fa-lg"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-7">
+								<div class="card-block">
+									<a href="watch.html">
+										<p>خطوات بسيطة للتسجيل بموقع خمسات والبدء بربح المال</p>
+									</a> <small class="text-muted"><i class="fa fa-film"></i> <span>700
+											مشاهدة</span> <a class="channel-img" href="channel.html"><span
+												class="d-sm-block mt-2"><img alt="channel image"
+													class="rounded-circle my-2 mr-2 mr-sm-0" src="img/khamsat.jpg"
+													width="30px"> <span
+													class="card-text">خمسات</span></span></a></small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card p-2 mb-4">
+						<div class="row">
+							<div class="col-sm-5">
+								<div class="card-icons w-100 h-100">
+									<a href="watch.html">
+										<img alt="" class="w-100 h-100" src="img/thumbnail/khamsat1.png">
+										<time>3:04</time>
+										<i class="fa-solid fa-play fa-lg"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="col-sm-7">
+								<div class="card-block">
+									<a href="watch.html">
+										<p>تعلم كيف تقدم مهاراتك على موقع خمسات</p>
+									</a> <small class="text-muted"><i class="fa fa-film"></i> <span>10 آلاف
+											مشاهدة</span> <a class="channel-img" href="channel.html"><span
+												class="d-sm-block mt-2"><img alt="channel image"
+													class="rounded-circle my-2 mr-2 mr-sm-0" src="img/khamsat.jpg"
+													width="30px"> <span
+													class="card-text">خمسات</span></span></a></small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card p-2 mb-4">
+						<div class="row">
+							<div class="col-sm-5">
+								<div class="card-icons w-100 h-100">
+									<a href="watch.html">
+										<img alt="" class="w-100 h-100" src="img/thumbnail/mostaql1.jpg">
+										<time>3:35</time>
+										<i class="fa-solid fa-play fa-lg"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="col-sm-7">
+								<div class="card-block">
+									<a href="watch.html">
+										<p>وظف أفضل المستقلين الموجودين في الوطن العربي - مستقل</p>
+									</a> <small class="text-muted"><i class="fa fa-film"></i> <span>3 آلاف
+											مشاهدة</span> <a class="channel-img" href="channel.html"><span
+												class="d-sm-block mt-2"><img alt="channel image"
+													class="rounded-circle my-2 mr-2 mr-sm-0" src="img/mostaql.png"
+													width="30px"> <span
+													class="card-text">مستقل</span></span></a></small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card p-2 mb-4">
+						<div class="row">
+							<div class="col-sm-5">
+								<div class="card-icons w-100 h-100">
+									<a href="watch.html">
+										<img alt="" class="w-100 h-100" src="img/thumbnail/mostaql2.png">
+										<time>8:34</time>
+										<i class="fa-solid fa-play fa-lg"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="col-sm-7">
+								<div class="card-block">
+									<a href="watch.html">
+										<p>أفضل النصائح لاختيار أفضل المستقلين والحفاظ على معدل توظيف مرتفع
+										</p>
+									</a> <small class="text-muted"><i class="fa fa-film"></i> <span>1.2 ألف
+											مشاهدة</span> <a class="channel-img" href="channel.html"><span
+												class="d-sm-block mt-2"><img alt="channel image"
+													class="rounded-circle my-2 mr-2 mr-sm-0" src="img/mostaql.png"
+													width="30px"> <span
+													class="card-text">مستقل</span></span></a></small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card p-2 mb-4">
+						<div class="row">
+							<div class="col-sm-5">
+								<div class="card-icons w-100 h-100">
+									<a href="watch.html">
+										<img alt="" class="w-100 h-100" src="img/thumbnail/app.jpg">
+										<time>7:04</time>
+										<i class="fa-solid fa-play fa-lg"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="col-sm-7">
+								<div class="card-block">
+									<a href="watch.html">
+										<p>دورة تطوير تطبيقات الجوال باستخدام تقنيات الويب - أكاديمية حسوب
+										</p>
+									</a> <small class="text-muted"><i class="fa fa-film"></i> <span>800
+											مشاهدة</span> <a class="channel-img" href="channel.html"><span
+												class="d-sm-block mt-2"><img alt="channel image"
+													class="rounded-circle my-2 mr-2 mr-sm-0" src="img/ch-logo.png"
+													width="30px"> <span class="card-text">أكاديمية
+													حسوب</span></span></a></small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/all.js">
+	</script>
+	<script src="js/jquery-3.7.0.min.js">
+	</script>
+	<script src="js/popper.min.js">
+	</script>
+	<script src="js/bootstrap.js">
+	</script>
+	<script src="js/index.js">
+	</script>
+	<script src="js/watch.js"></script>
+</body>
+
+</html>
